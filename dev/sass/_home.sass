@@ -1,0 +1,64 @@
+@import "animation"
+
+header.inicio
+	.logo
+		position: absolute
+		width: 80px
+		height: 80px
+		top: 1.5em
+		left: 1.5em
+
+		/*700*/
+		@media(min-width: 43.750em)
+			width: 120px
+			height: 120px
+			top: 3em
+			left: 3em
+
+	h1
+		position: absolute
+		bottom: 0.6em
+		right: 0.6em
+		text-align: right
+		color: $lightColor
+		font-size: 3.2em
+  		color: #d6d6d6
+    	letter-spacing: .05em
+		text-transform: uppercase
+  		text-rendering: optimizeLegibility
+		line-height: 85%
+		mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), color-stop(50%, rgba(0,0,0,.5)), to(rgba(0,0,0,1)))
+
+		/*700*/
+		@media(min-width: 43.750em)
+			font-size: 7em
+
+		/*1200*/
+		@media (min-width: 75.000em)
+			font-size: 10em
+
+	.seta
+		position: absolute
+		bottom: 10px
+		left: 50%
+
+		&:before
+			content: ""
+			display: block
+			width: 0 
+			height: 0 
+			border-left: 5px solid transparent
+			border-right: 5px solid transparent
+			border-top: 5px solid $lightColor
+			margin-bottom: 3px
+			animation: pisca 1s ease 0.5s infinite
+
+		&:after
+			content: ""
+			display: block
+			width: 0 
+			height: 0 
+			border-left: 5px solid transparent
+			border-right: 5px solid transparent
+			border-top: 5px solid $lightColor
+			animation: pisca 1s ease 1s infinite

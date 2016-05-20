@@ -1,12 +1,85 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 	<head>
-		<meta charset="UTF-8">
-		<title>Document</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="robots" content="index, nofollow">
+		<title>Sub Art Tattoo</title>
+		<meta name="description" content="">
+		<meta name="keywords" content="">
 		<link rel="stylesheet" href="dev/css/main.css">
 	</head>
-	<body>		
+	<body>
+		<!-- loader -->
+		<img src="assets/images/loader.gif" id="loader">
+		<!-- background -->
+		<video poster="assets/images/tattoing.gif" autoplay loop muted  id="bgVideo">
+			<source src="assets/videos/tattoing.webm">
+			<source src="assets/videos/tattoing.mp4">
+		</video>
+		<!-- menu -->
+		<a href="#" class="btn-open-menu">
+			<img src="assets/images/hamburguer-menu.svg" class="svg icon-hamburguer">
+		</a>
+		<nav>
+			<img src="assets/images/logo-sub-art-tattoo-ancora.svg" alt="Logo Sub Art Tattoo" class="svg logo-ancora">
+
+			<a href="" class="btn-close-menu">
+				<img src="assets/images/close.svg" class="svg icon-close">
+			</a>
+			<ul>
+				<li><a href="#">Início</a></li>
+				<li><a href="#">Estúdio</a></li>
+				<li><a href="#">Galeria</a></li>
+				<li><a href="#">Contato</a></li>
+			</ul>
+			<aside>
+				<a href="#">
+					<img src="assets/images/facebook.svg" alt="Página no Facebook" class="svg social facebook">
+				</a>
+				<a href="#">
+					<img src="assets/images/instagram.svg" alt="Página no instagram" class="svg social instagram">
+				</a>
+			</aside>
+		</nav>
+		<!-- menu -->
+		<header class="inicio">
+			<img src="assets/images/logo-sub-art-tattoo.svg" alt="Logo Sub Art Tattoo" class="svg logo">
+
+			<h1>
+				Sub<br>
+				Art<br>
+				Tattoo<br>
+			</h1>
+			<span class="seta"></span>
+		</header>
+		<!-- estudio -->
+		<div class="full-container estudio">
+			<div class="container">
+				<aticle class="content">
+					<h1>estudio</h1>
+				</aticle>
+			</div>
+		</div>
+		<!-- galeria -->
+		<div class="full-container galeria">
+			<div class="container">
+				<section class="content">
+					<h1>galeria</h1>
+				</section>
+			</div>
+		</div>
+		<!-- contato -->
+		<div class="full-container contato">
+			<div class="container">
+				<section class="content">
+					<h1>contato</h1>
+				</section>
+			</div>
+		</div>
+
 		<!-- scripts -->
+		<script src="vendor/jquery/dist/jquery.js"></script>
 		<script src="dev/js/main.js"></script>
 	</body>
 </html>
