@@ -16,6 +16,7 @@
   ],
   "dependencies": {
     "jquery": "^2.2.4",
-    "css-reset": "^2.5.1"
+    "css-reset": "^2.5.1",
+    "JAIL": "https://github.com/sebarmeli/JAIL.git"
   }
 }

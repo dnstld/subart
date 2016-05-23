@@ -1,6 +1,9 @@
 body
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
 
+	*, *:before, *:after
+  		box-sizing: border-box
+
 	h1, h2, h3, h4, h5, h6
 		font-weight: bolder
 
@@ -23,6 +26,7 @@ body
 
 	.full-container
 		width: 100%
+		overflow: hidden
 
 		> .container
 			max-width: 1000px
@@ -30,5 +34,6 @@ body
 
 			> .content
 				display: block
-				width: calc(100% - 40px)
+				overflow: hidden
+				width: 100%
 				padding: 20px

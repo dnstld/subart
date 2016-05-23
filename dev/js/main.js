@@ -32,7 +32,8 @@ var SubArt = {
 		SubArt.alturaPaginaInicial();
 		SubArt.menuOpen();
 		SubArt.inineSVG();
-		SubArt.onResize();
+        SubArt.onResize();
+		SubArt.loadImages();
 	},
 	/**
      * alturaPaginaInicial
@@ -134,6 +135,21 @@ var SubArt = {
 	    $(window).on("resize" ,function() {
 	    	location.reload();
 	    });
+    },
+    /**
+     * loadImages
+     * @access public
+     * @desc carrega as imagens quando estiverem visivel
+     *
+     * @return {Void}
+     */
+    loadImages: function() {
+        "use strict";
+
+        $("img.lazy").jail({
+            effect: "fadeIn",
+            speed: 1000
+        });
     }
 }
 /**
