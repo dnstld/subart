@@ -3,7 +3,6 @@ var gulp             = require("gulp"),
 	sourcemaps       = require("gulp-sourcemaps"),
 	browserSync      = require("browser-sync").create(),
 	watch            = require("gulp-watch"),
-	autoprefixer     = require("gulp-autoprefixer"),
 	minifyCSS        = require("gulp-clean-css"),
 	rename           = require("gulp-rename"),
 	concatJS         = require("gulp-concat"),
@@ -16,6 +15,7 @@ var gulp             = require("gulp"),
 	scripts          = {
 		jquery: "vendor/jquery/dist/jquery.js",
 		loadImages: "vendor/JAIL/src/jail.js",
+		magnificPopup: "vendor/magnific-popup/dist/jquery.magnific-popup.js",
 		main: "dev/js/main.js"
 	};
 
@@ -28,7 +28,6 @@ gulp.task("sass", function() {
 	    .pipe(sourcemaps.init())
 		.pipe(plumber())
 		.pipe(sass())
-		.pipe(autoprefixer())
 		.pipe(sourcemaps.write())
 		.pipe(gulp.dest("dev/css"))
 		.pipe(browserSync.reload({
@@ -69,6 +68,7 @@ gulp.task("js", function() {
 	return gulp.src([
 			scripts.jquery,
 			scripts.loadImages,
+			scripts.magnificPopup,
 			scripts.main
 		])
 		.pipe(concatJS("main.js"))

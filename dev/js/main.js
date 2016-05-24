@@ -33,7 +33,8 @@ var SubArt = {
 		SubArt.menuOpen();
 		SubArt.inineSVG();
         SubArt.onResize();
-		SubArt.loadImages();
+        // SubArt.loadImages();
+		SubArt.shuffleImages();
 	},
 	/**
      * alturaPaginaInicial
@@ -150,6 +151,28 @@ var SubArt = {
             effect: "fadeIn",
             speed: 1000
         });
+    },
+    /**
+     * shuffleImages
+     * @access public
+     * @desc carrega as imagens quando estiverem visivel
+     *
+     * @return {Void}
+     */
+    shuffleImages: function() {
+        "use strict";
+        
+        $(".galeria-estudio-item").magnificPopup({
+            type: "image",
+            gallery: {
+                enabled: true
+            },
+            preload: [0, 2],
+            arrowMarkup: '<button title="%title%" type="button" class="mfp-arrow mfp-arrow-%dir%"></button>',
+            tPrev: 'Previous (Left arrow key)',
+            tNext: 'Next (Right arrow key)',
+            tCounter: '<span class="mfp-counter">%curr% de %total%</span>'
+        });
     }
 }
 /**
@@ -173,7 +196,7 @@ $(window).on("load", function() {
     $("#loader").fadeOut("slow");
 
     // va para o inicio
-    $("html, body").animate({
-        scrollTop: 0
-    }, "slow");
+    // $("html, body").animate({
+    //     scrollTop: 0
+    // }, "slow");
 });
